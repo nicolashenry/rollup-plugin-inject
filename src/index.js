@@ -176,10 +176,7 @@ export default function inject(options) {
       });
 
       if (newImports.size === 0) {
-        return {
-          code,
-          ast
-        };
+        return null;
       }
       const importBlock = Array.from(newImports.values())
         .join("\n\n");
